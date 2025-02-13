@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>天官赐福</title>
+    <style>
+        body {
+            background-image: url('downloaded-image.jpg'); /* 请将此处替换为你的背景图片路径 */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>天官赐福</h2>
+        <input type="text" id="username" placeholder="请输入您的姓名">
+        <input type="text" id="blessor" placeholder="请输入赐福人的姓名">
+        <button onclick="checkLogin()">登录</button>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var blessor = document.getElementById('blessor').value;
+            
+            if (username === '刘欢荣' && blessor === '李龙') {
+                var blessings = [
+                    '祝你今天开心！',
+                    '祝你明天也开心！',
+                    '祝你天天都开心！',
+                    '希望小姐姐一直都这么好看！',
+                    '愿你的每一天都充满阳光和欢笑！',
+                    '祝福你，幸福安康，万事如意！'
+                ];
+                
+                // 弹出一个包含所有祝福的对话框
+                alert(blessings.join('\n'));
+            } else {
+                alert('姓名或赐福人输入不正确，请重新输入！');
+            }
+        }
+    </script>
+</body>
+</html>
